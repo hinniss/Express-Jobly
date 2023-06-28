@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "examples": [
+        {
+            "title": "j1",
+            "salary": 1,
+            "equity": 0.1
+        }
+    ],
+    "required": [
+    ],
+    "properties": {
+        "title": {
+            "$id": "#/properties/title",
+            "type": "string",
+            "title": "The title schema",
+            "description": "The title of the job position",
+            "default": "",
+            "examples": [
+                "j1"
+            ]
+        },
+        "salary": {
+            "$id": "#/properties/salary",
+            "type": "integer",
+            "title": "The salary schema",
+            "description": "The salary of the position",
+            "minimum": 1,
+            "examples": [
+                1
+            ]
+        },
+        "equity": {
+            "$id": "#/properties/equity",
+            "type": "number",
+            "title": "The equity schema",
+            "description": "The equity (as a decimal between 0.0 and 1.0)",
+            "default": 0.0,
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "examples": [
+                0.1
+            ]
+        }
+    },
+    "additionalProperties": false
+}
